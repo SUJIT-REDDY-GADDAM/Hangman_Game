@@ -82,8 +82,10 @@ def check_letter(l,word):
                 to_print_list.append('_')
         return l
     else:
+        incorrect_tries_list.append(l)
         print('*************** Sorry! This letter is not present')
-        print('*************** You have %d more INCORRECT try(s) left'%(5 - wrong_tries_count ),end=' ')
+        print('*************** You have %d more INCORRECT try(s) left'%(5 - wrong_tries_count ))
+        print('The list of INCORRECT letter(s) you guessed is/are : ',incorrect_tries_list,end=' ')
         draw_hangman(wrong_tries_count + 1)
         return wrong_tries_count + 1
 
@@ -108,6 +110,7 @@ GALLOWS  ===>        |
 word = get_word_from_system()
 print(word)
 wrong_tries_count = 0
+incorrect_tries_list = []
 correct_tries_list = []
 to_print_list = []
 
@@ -120,7 +123,7 @@ while wrong_tries_count < 6:
     c_l = str(check_letter(l,word))
     if c_l.isdigit():
         wrong_tries_count = int(c_l)
-    if '_' not in to_print_list and wrong_tries_count > 1:
+    if '_' not in to_print_list and len(to_print_list) != 0:
         break
 
 if wrong_tries_count >= 6:
