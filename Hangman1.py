@@ -120,7 +120,7 @@ while wrong_tries_count < 6:
     c_l = str(check_letter(l,word))
     if c_l.isdigit():
         wrong_tries_count = int(c_l)
-    if '_' not in to_print_list:
+    if '_' not in to_print_list and wrong_tries_count > 1:
         break
 
 if wrong_tries_count >= 6:
