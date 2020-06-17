@@ -56,6 +56,6 @@ while wrong_tries_count < 6:
         break
 
 if wrong_tries_count >= 6:
-    print('\n\n***************** OOPS ! You lost the game...Better Luck Next Time *****************')
+    print('\n\n***************** OOPS ! YOU lost the game...Better Luck Next Time *****************')
 else:
     print('\n\n************************ CONGRATULATIONS ! You Won the game ************************')
