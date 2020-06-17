@@ -108,7 +108,7 @@ GALLOWS  ===>        |
 ''')
 
 word = get_word_from_system()
-print(word)
+#print(word)
 wrong_tries_count = 0
 incorrect_tries_list = []
 correct_tries_list = []
