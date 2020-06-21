@@ -128,6 +128,7 @@ while wrong_tries_count < 6:
 
 if wrong_tries_count >= 6:
     print('\n\n***************** OOPS ! You lost the game...Better Luck Next Time *****************')
+    print('***************** The word is %s'%(word))
     print('***************** AHH ! THE MAN IS HANGED ! *****************')
 else:
     print('\n\n************************ CONGRATULATIONS ! You Won the game ************************')
